@@ -1,16 +1,10 @@
 package project.matrix_calculator.model;
+import java.lang.Math;
+import java.util.ArrayList;
 
 public class Matrix_determinant {
-    private double[][] squareMatrix = new double[0][0];
-    private double det;
-    private int size;
 
-    public Matrix_determinant(int rows, int cols){
-        squareMatrix = new double[rows][cols];
-        this.size = squareMatrix.length;
-    }
-    //Mutators
-    public double Calculate_det(double[][] matrix){
+    public static double Calculate_det(double[][] matrix){
         double det = 0;
         if(matrix.length == 2)
         {
@@ -18,22 +12,26 @@ public class Matrix_determinant {
         }
         else{
             for(int i = 0; i < matrix.length; i++){
-                Calculate_det(generateMatrix(matrix, i));
-                det += matrix[0][i] * Calculate_det(generateMatrix(matrix, i));
+                det +=Math.pow(-1,(i+2))*matrix[0][i] * Calculate_det(generateMatrix(matrix, i));
             }
         }
         return det;
     }
 
     //Helper Method
-    public double[][] generateMatrix(double[][] matrix,int col){
+    public static double[][] generateMatrix(double[][] matrix,int col){
+        int count = 0;
+        int count2 = -1;
         double[][] newMatrix = new double[matrix.length-1][matrix.length-1];
         for(int i = 1; i < matrix.length;i++){
+            count = 0;
+            count2++;
             for(int j = 0; j < matrix[i].length; j++){
                 if(j == col){
                     continue;
                 }
-                newMatrix[i-1][j] = matrix[]
+                newMatrix[count2][count] = matrix[i][j];
+                count++;
             }
         }
         return newMatrix;
