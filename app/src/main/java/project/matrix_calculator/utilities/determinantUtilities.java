@@ -31,4 +31,16 @@ public class determinantUtilities {
         return det;
     }
 
+    public static String[][]steps(double[][] matrix){
+
+        for(int i = 0; i < matrix.length;i++){
+            
+        }
+
+
+
+
+        return null;
+    }
+
 }
