@@ -1,5 +1,6 @@
 package project.matrix_calculator.model;
 import project.matrix_calculator.utilities.determinantUtilities;
+import project.matrix_calculator.utilities.cofactorUtilities;
 
 public class coFactorExt {
     private double[][] matrix;
@@ -12,7 +13,7 @@ public class coFactorExt {
     }
     //Accessors
     public double[][] getCoFactors(){
-        return getCoFactor(matrix);
+        return cofactorUtilities.generate_cofac_matrix(matrix);
     }
 
 
