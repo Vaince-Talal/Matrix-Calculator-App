@@ -5,7 +5,7 @@ import project.matrix_calculator.utilities.determinantUtilities;
 
 import static org.junit.Assert.*;
 
-public class Tests_det {
+public class Tests_determinantUtilities {
     @Test
     public void test_01() { //Testing a 2x2 matrix
         double[][] matrix = {

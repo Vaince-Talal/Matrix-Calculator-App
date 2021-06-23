@@ -23,9 +23,10 @@ public class determinantUtilities {
         double det = 0;
         if (matrix.length == 2) {
             det += (matrix[0][0] * matrix[1][1]) - (matrix[0][1] * matrix[1][0]);
-        } else {
+        }
+        else {
             for (int i = 0; i < matrix.length; i++) {
-                det += Math.pow(-1, (i + 2)) * matrix[0][i] * Calculate_det(generateMatrix(matrix, i));
+                det += Math.pow((-1), (i + 2)) * matrix[0][i] * Calculate_det(generateMatrix(matrix, i));
             }
         }
         return det;

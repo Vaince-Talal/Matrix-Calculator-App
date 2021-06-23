@@ -1,6 +1,6 @@
 package project.matrix_calculator.utilities;
 
-public class transpose {
+public class transposeUtilities {
     //Helper methods
     public static double[][] transpose(double[][] matrix){
         double[][] new_matrix = new double[matrix[0].length][matrix.length];

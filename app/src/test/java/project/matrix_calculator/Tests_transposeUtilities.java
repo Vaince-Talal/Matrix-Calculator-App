@@ -1,9 +1,9 @@
 package project.matrix_calculator;
 import org.junit.Test;
-import project.matrix_calculator.utilities.transpose;
+import project.matrix_calculator.utilities.transposeUtilities;
 import static org.junit.Assert.*;
 
-public class Tests_transpose {
+public class Tests_transposeUtilities {
     @Test
     public void test_01() { //Testing a 2x2 matrix
         double[][] matrix = {
@@ -14,7 +14,7 @@ public class Tests_transpose {
                 {1,3},
                 {2,4}
         };
-        assertArrayEquals(transpose.transpose(matrix), expected);
+        assertArrayEquals(transposeUtilities.transpose(matrix), expected);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class Tests_transpose {
                 {1,3,5},
                 {2,4,6}
         };
-        assertArrayEquals(transpose.transpose(matrix),expected);
+        assertArrayEquals(transposeUtilities.transpose(matrix),expected);
     }
 
     @Test
@@ -42,7 +42,7 @@ public class Tests_transpose {
                 {2,5},
                 {3,6}
         };
-        assertArrayEquals(transpose.transpose(matrix),expected);
+        assertArrayEquals(transposeUtilities.transpose(matrix),expected);
     }
     @Test
     public void test_04(){ //Testing a 3x3 matrix
@@ -56,7 +56,7 @@ public class Tests_transpose {
                 {2,5,8},
                 {3,6,9}
         };
-        assertArrayEquals(transpose.transpose(matrix),expected);
+        assertArrayEquals(transposeUtilities.transpose(matrix),expected);
     }
 
     @Test
@@ -72,6 +72,6 @@ public class Tests_transpose {
                 {3,7,11},
                 {4,8,12}
         };
-        assertArrayEquals(transpose.transpose(matrix),expected);
+        assertArrayEquals(transposeUtilities.transpose(matrix),expected);
     }
 }

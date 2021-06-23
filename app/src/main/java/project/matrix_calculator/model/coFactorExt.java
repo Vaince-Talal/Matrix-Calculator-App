@@ -13,7 +13,7 @@ public class coFactorExt {
     }
     //Accessors
     public double[][] getCoFactors(){
-        return cofactorUtilities.generate_cofac_matrix(matrix);
+        return cofactorUtilities.cofac_matrix(matrix);
     }
 
 
